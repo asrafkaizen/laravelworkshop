@@ -7,5 +7,7 @@ bengkel laravel
 6. bukak vscode. hanya akan usik folder app/http
 7. app/database, factory utk development/test. migrations utk buat table, seed utk  create user atau data tanpa perlu dia masukkan sndiri
 8. change .env . Then, php artisan config:clear , cache:clear
-9. Make Auth: composer require laravel/ui --dev , php artisan ui vue --auth
-10. 
+9. php artisan migrate , php artisan migrate:rollback, migrate:refresh
+10. Make Auth: composer require laravel/ui --dev , php artisan ui vue --auth
+11. php artisan tinker, factory(App\User::class,10)->create()
+12. php artisan make:seeder UsersTableSeeder, edit the run function of DatabaseSeeder.php (check commit), run by php artisan db:seed

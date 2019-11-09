@@ -2,15 +2,17 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
+       /*
+        //all this is pasted into database seeder, the one already created by default
         DB::table('users')->insert([
             'name' => 'tarmizi',
             'email' => 'tarmizi@gmail.com',
@@ -18,9 +20,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'asyraf',
-            'email' => 'acap@gmail.com',
-            'password' => bcrypt('acap123'),
+            'name' => 'tarmizi2',
+            'email' => 'tarmizi2@gmail.com',
+            'password' => bcrypt('password123'),
         ]);
+        */
     }
 }
