@@ -37,7 +37,18 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+
+        /*
+        $blog = new Blog();
+        $blog->title = $request->get('title');
+        $blog->body = $request->get('body');
+        $blog->save(); */
+
+        $blog = Blog::create($request->only('title', 'body'));
+
+        return view('blogs.index');
+
     }
 
     /**

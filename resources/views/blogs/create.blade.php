@@ -9,16 +9,16 @@
 
                 <div class="card-body">
 
-                <form action="" method="POST">
+                <form method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="blogtitle">Title</label>
-                        <input class="form-control" id="blogtitle" aria-describedby="titleHelp" placeholder="Enter blog title">
+                        <label for="title">Title</label>
+                        <input class="form-control" name="title" aria-describedby="titleHelp" placeholder="Enter blog title">
                         <small id="titleHelp" class="form-text text-muted">Use an interesting title to boost your blogpost</small>
                     </div>
                     <div class="form-group">
-                        <label for="blogtext">Body text</label>
-                        <textarea class="form-control" id="blogtext" rows="3"></textarea>
+                        <label for="body">Body text</label>
+                        <textarea class="form-control" name="body" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
