@@ -18,6 +18,6 @@ Route::get('/', function () {
 Route::get('/test', function () {
     echo "testing";
 });
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');

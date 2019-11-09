@@ -11,3 +11,4 @@ bengkel laravel
 10. Make Auth: composer require laravel/ui --dev , php artisan ui vue --auth
 11. php artisan tinker, factory(App\User::class,10)->create()
 12. php artisan make:seeder UsersTableSeeder, edit the run function of DatabaseSeeder.php (check commit), run by php artisan db:seed
+13. removing register button: edit routes/web.php, and follow in https://laravel.com/docs/6.x/authentication
