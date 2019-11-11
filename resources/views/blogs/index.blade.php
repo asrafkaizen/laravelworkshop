@@ -33,6 +33,8 @@
                 @endforeach
                 </table>
                 {{ $blogs->links()}}
+                <br>
+                <p style='text-align:center'><a href="create">Add a new blogpost!</a></p>
                 </div>
             </div>
         </div>
