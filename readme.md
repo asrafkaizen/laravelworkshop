@@ -13,4 +13,3 @@ bengkel laravel
 12. php artisan make:seeder UsersTableSeeder, edit the run function of DatabaseSeeder.php (check commit), run by php artisan db:seed
 13. removing register button: edit routes/web.php, and follow in https://laravel.com/docs/6.x/authentication
 14. adding blog: php artisan make:model Blogs -a, add a route at routes/web.php, add codes in BlogController, add codes in newly created migration file, add folder and 2 files in resources\views\blogs. add view in controller, then create the form and code for storing
-15. 
