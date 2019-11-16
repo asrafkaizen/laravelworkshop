@@ -13,10 +13,9 @@
                 @endif
 
                 <div class="card-header">Blogs index</div>
-
-                <div class="card-body">
+                <div class="card-body">                
                 <table class='table'>
-                    <tr><td>id</td><td>title</td><td>updated at</td>
+                    <tr><th>id</th><th>title</th><th>updated at</th><th></th>
                     </tr>
                 @foreach ($blogs as $blog)
                     <tr>
@@ -34,7 +33,9 @@
                 </table>
                 {{ $blogs->links()}}
                 <br>
-                <p style='text-align:center'><a href="create">Add a new blogpost!</a></p>
+                
+                <a href="create" class="btn btn-primary">Add new blog</a>
+                <!--p style='text-align:center'><a href="create">Add a new blogpost!</a></p-->
                 </div>
             </div>
         </div>
