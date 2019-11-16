@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
 
-            @if (session()->has('alert'))
+                @if (session()->has('alert'))
                     <div class="alert {{ session()->get('alert-type')}}">
                         {{session()->get('alert')}}
                     </div>
@@ -23,9 +23,9 @@
                         <td>{{ $blog->title}}</td>
                         <td>{{ $blog->updated_at->diffForHumans()}}</td>
                         <td>
-                            <a href="{{ route('blog:show',$blog)}}" class="btn btn-success">Show</a>
+                            <a href="{{ route('blog:show', $blog)}}" class="btn btn-success">Show</a>
                             <a href="{{ route('blog:edit', $blog)}}" class="btn btn-primary">Edit</a>
-                            <a href="" class="btn btn-danger"
+                            <a href="{{ route('blog:padam',$blog)}}" class="btn btn-danger"
                                 onclick="return confirm('Are you sure?')">Delete</a>
                         </td>
                     </tr>              
@@ -33,8 +33,6 @@
                 @endforeach
                 </table>
                 {{ $blogs->links()}}
-                <br>
-            
                 <!--p style='text-align:center'><a href="create">Add a new blogpost!</a></p-->
                 </div>
                 <a href="{{route('blog:create')}}" class="btn btn-primary">Add new blog</a>

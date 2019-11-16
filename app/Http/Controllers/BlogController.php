@@ -83,7 +83,8 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $blog->update($request->only('title', 'body'));
+        return redirect()->route('blog:show', $blog)->with(['alert-type' => 'alert-primary','alert'=> 'Your blog is updated']);
     }
 
     /**
@@ -92,6 +93,13 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
+
+    public function padam(Blog $blog)
+    {
+        $blog->delete();
+        return redirect()->route('blogs')->with(['alert-type' => 'alert-danger','alert'=> 'Your blog has been deleted']);
+    }
+
     public function destroy(Blog $blog)
     {
         //
