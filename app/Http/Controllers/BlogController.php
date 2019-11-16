@@ -13,10 +13,12 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    /*only user that have logged in can see blogs
     public function __construct()
     {
         $this->middleware('auth');
     }
+    */
 
     public function index()
     {

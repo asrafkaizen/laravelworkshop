@@ -22,7 +22,7 @@
                         <td>{{ $blog->id}}</td>
                         <td>{{ $blog->title}}</td>
                         <td>{{ $blog->updated_at->diffForHumans()}}</td>
-                        <td>{{ $blog->user->name}}</td>
+                        <td>{{ $blog->author }}</td>
                         <!--td>{{ $blog->user_id ? $blog->user->name : "ENTAH"}}</td-->
                         <td>
                             <a href="{{ route('blog:show', $blog)}}" class="btn btn-success">Show</a>
