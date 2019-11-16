@@ -15,13 +15,15 @@
                 <div class="card-header">Blogs index</div>
                 <div class="card-body">                
                 <table class='table'>
-                    <tr><th>id</th><th>title</th><th>updated at</th><th></th>
+                    <tr><th>id</th><th>title</th><th>updated at</th><th>poster</th><th>action</th>
                     </tr>
                 @foreach ($blogs as $blog)
                     <tr>
                         <td>{{ $blog->id}}</td>
                         <td>{{ $blog->title}}</td>
                         <td>{{ $blog->updated_at->diffForHumans()}}</td>
+                        <td>{{ $blog->user->name}}</td>
+                        <!--td>{{ $blog->user_id ? $blog->user->name : "ENTAH"}}</td-->
                         <td>
                             <a href="{{ route('blog:show', $blog)}}" class="btn btn-success">Show</a>
                             <a href="{{ route('blog:edit', $blog)}}" class="btn btn-primary">Edit</a>

@@ -19,3 +19,12 @@ Saturday 16nov2019
 2. create your .env file since it is not pushed into git
 2.1. update app name, generate app key, db name, db pw, and create your db
 2.2. remember to do `php artisan cache:clear, php artisan config:clear` after you change .env
+3. php artisan make:migration alter_users_table_add_user_id // for FK
+4. SMTP server setting in .env ->
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=whoami@gmail.com
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=tls
+5. 

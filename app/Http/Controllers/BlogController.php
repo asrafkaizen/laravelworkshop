@@ -17,7 +17,7 @@ class BlogController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         $blogs = Blog::paginate(5);
@@ -45,15 +45,19 @@ class BlogController extends Controller
     {
         //dd($request);
 
-        /*
+        /* method1
         $blog = new Blog();
         $blog->title = $request->get('title');
         $blog->body = $request->get('body');
-        $blog->save(); */
+        $blog->save(); 
 
+        method 2
         $blog = Blog::create($request->only('title', 'body'));
+        */
 
-        //return view('blogs.index');
+        $user = auth()->user();
+        $blog = $user->blogs()->create($request->only('title', 'body'));
+        
         return redirect()->route('blogs')->with(['alert-type' => 'alert-success','alert'=> 'Your blog saved']);
 
     }
