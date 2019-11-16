@@ -23,7 +23,8 @@
                         <td>{{ $blog->title}}</td>
                         <td>{{ $blog->updated_at->diffForHumans()}}</td>
                         <td>
-                            <a href="" class="btn btn-primary">Edit</a>
+                            <a href="{{ route('blog:show',$blog)}}" class="btn btn-success">Show</a>
+                            <a href="{{ route('blog:edit', $blog)}}" class="btn btn-primary">Edit</a>
                             <a href="" class="btn btn-danger"
                                 onclick="return confirm('Are you sure?')">Delete</a>
                         </td>
@@ -33,10 +34,10 @@
                 </table>
                 {{ $blogs->links()}}
                 <br>
-                
-                <a href="create" class="btn btn-primary">Add new blog</a>
+            
                 <!--p style='text-align:center'><a href="create">Add a new blogpost!</a></p-->
                 </div>
+                <a href="{{route('blog:create')}}" class="btn btn-primary">Add new blog</a>
             </div>
         </div>
     </div>

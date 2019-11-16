@@ -60,7 +60,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('blogs.show')->with(compact('blog'));
     }
 
     /**
@@ -71,7 +71,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('blogs.edit')->with(compact('blog'));
     }
 
     /**
