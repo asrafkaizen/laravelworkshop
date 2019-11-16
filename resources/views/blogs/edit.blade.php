@@ -5,12 +5,6 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
-                @if (session()->has('alert'))
-                    <div class="alert {{ session()->get('alert-type')}}">
-                        {{session()->get('alert')}}
-                    </div>
-                @endif
                 <div class="card-header">Blog Edit</div>
 
                 <div class="card-body">
