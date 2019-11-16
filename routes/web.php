@@ -19,7 +19,7 @@ Route::get('/test', function () {
     echo "testing";
 });
 //Auth::routes(['register' => false]);
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blogs', 'BlogController@index')->name('blogs');

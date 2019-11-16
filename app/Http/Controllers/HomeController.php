@@ -11,9 +11,12 @@ class HomeController extends Controller
      *
      * @return void
      */
+
+     //upon construction of this controller, it will be checked
+     //here, unauthenticated user cannot access this controller
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'verified']);
     }
 
     /**
