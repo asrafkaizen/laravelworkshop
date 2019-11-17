@@ -20,10 +20,10 @@ Route::get('/test', function () {
 });
 //Auth::routes(['register' => false]);
 Auth::routes(['verify' => true]);
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blogs', 'BlogController@index')->name('blogs');
-Route::get('/blogs/{blog}', 'BlogController@show')->name('blog:show');
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/blogs/create', 'BlogController@create')->name('blog:create');
@@ -32,3 +32,5 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/blogs/edit/{blog}', 'BlogController@update')->name('blog:update');
     Route::get('/blogs/delete/{blog}', 'BlogController@padam')->name('blog:padam');
 });
+
+Route::get('/blogs/{blog}', 'BlogController@show')->name('blog:show');

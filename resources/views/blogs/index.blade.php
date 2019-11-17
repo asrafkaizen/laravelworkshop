@@ -12,7 +12,11 @@
                     </div>
                 @endif
 
-                <div class="card-header">Blogs index</div>
+                <div class="card-header">Blogs index
+                    <div class="float-right">
+                        <a href="{{ route('blog:create')}}" class="btn btn-primary">New</a>
+                    </div>
+                </div>
                 <div class="card-body">                
                 <table class='table'>
                     <tr><th>id</th><th>title</th><th>updated at</th><th>poster</th><th>action</th>
